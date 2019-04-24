@@ -1,0 +1,40 @@
+<div class="section">
+    <mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
+
+    <section class="example-section">
+        <label class="example-margin">Bar Type:</label>
+        <mat-radio-group [(ngModel)]="barType">
+            <mat-radio-button class="example-margin" value="ok">
+                OK
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="error">
+                Error
+            </mat-radio-button>
+        </mat-radio-group>
+    </section>
+
+    <label class="example-margin">Direction:</label>
+    <mat-radio-group [(ngModel)]="dir">
+        <mat-radio-button class="example-margin" value="ltr">
+            LTR
+        </mat-radio-button>
+        <mat-radio-button class="example-margin" value="rtl">
+            RTL
+        </mat-radio-button>
+    </mat-radio-group>
+
+    <!-- This way requires viewEncapsulation set to none -->
+    <!-- <mat-progress-bar
+        [ngClass]="{ 'my-progress-bar-ok': barType === 'ok', 'my-progress-bar-error': barType === 'error' }"
+        [mode]="mode"
+        [value]="value"
+        [dir]="dir"
+    ></mat-progress-bar> -->
+
+    <mat-progress-bar
+        [ngClass]="{ 'my-progress-bar-ok': barType === 'ok', 'my-progress-bar-error': barType === 'error' }"
+        [mode]="mode"
+        [value]="value"
+        [dir]="dir"
+    ></mat-progress-bar>
+</div>

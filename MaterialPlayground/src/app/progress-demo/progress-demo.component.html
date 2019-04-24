@@ -1,0 +1,24 @@
+<h2>Custom Progress Bar</h2>
+<app-custom-progress></app-custom-progress>
+
+<h2>Material Progress Bar</h2>
+
+<section class="example-section">
+    <label class="example-margin">Color:</label>
+    <mat-radio-group [(ngModel)]="color">
+        <mat-radio-button class="example-margin" value="primary">
+            Primary
+        </mat-radio-button>
+        <mat-radio-button class="example-margin" value="accent">
+            Accent
+        </mat-radio-button>
+        <mat-radio-button class="example-margin" value="warn">
+            Warn
+        </mat-radio-button>
+    </mat-radio-group>
+</section>
+
+<mat-progress-bar [color]="color" value="22"></mat-progress-bar>
+
+<!-- <h2>Extended Progress Bar</h2>
+<app-extended-progress [color]="color" value="22"></app-extended-progress> -->

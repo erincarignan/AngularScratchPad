@@ -1,0 +1,77 @@
+@import '~@angular/material/theming';
+
+// theme colors
+
+$my-theme-primary: mat-palette($mat-purple);
+$my-theme-secondary: mat-palette($mat-pink);
+$my-theme-accent: mat-palette($mat-indigo);
+$my-theme: mat-light-theme($my-theme-primary, $my-theme-secondary, $my-theme-accent);
+
+// $my-progress-primary: mat-palette($mat-indigo);
+// $my-progress-accent: mat-palette($mat-amber);
+// $my-progress-warn: mat-palette($mat-red);
+// $my-progress: mat-light-theme($my-progress-primary, $my-progress-accent, $my-progress-warn);
+
+// global style for progress bar
+// mat-progress-bar .mat-progress-bar-buffer {
+//     background: gainsboro;
+// }
+
+// mat-progress-bar .mat-warn .mat-progress-bar-buffer {
+//     background-color: gainsboro;
+// }
+// mat-progress-bar .mat-progress-bar-fill::after {
+//     background-color: green;
+// }
+
+$progress-bar-ok: green;
+$progress-bar-error: red;
+$progress-bar-background: gainsboro;
+
+// using this route, EVERY progress bar would have to be green/yellow/red
+// $traffic-light-go: mat-palette($mat-green);
+// $traffic-light-warn: mat-palette($mat-yellow);
+// $traffic-light-error: mat-palette($mat-red, A200, A100, A400);
+// $traffic-light-theme: mat-light-theme($traffic-light-go, $traffic-light-warn, $traffic-light-error);
+
+// // Include the theme styles for only specified components.
+// @include mat-core-theme($traffic-light-theme);
+// @include mat-progress-bar-theme($traffic-light-theme);
+
+.my-progress-bar-ok {
+    &.mat-progress-bar {
+        margin: 10px;
+        height: 20px;
+        border-radius: 20px;
+    }
+
+    .mat-progress-bar-fill::after {
+        background-color: $progress-bar-ok;
+    }
+
+    .mat-progress-bar-buffer {
+        background-color: $progress-bar-background;
+    }
+}
+.my-progress-bar-error {
+    &.mat-progress-bar {
+        margin: 10px;
+        height: 20px;
+        border-radius: 20px;
+    }
+
+    .mat-progress-bar-fill::after {
+        background-color: $progress-bar-error;
+    }
+
+    .mat-progress-bar-buffer {
+        background-color: $progress-bar-background;
+    }
+}
+
+/* for sidenav to take a whole page */
+html,
+body {
+    margin: 0;
+    height: 100%;
+}

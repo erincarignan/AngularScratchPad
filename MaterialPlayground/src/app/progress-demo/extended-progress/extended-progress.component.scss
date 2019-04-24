@@ -1,0 +1,10 @@
+@import '~@angular/material/theming';
+
+$traffic-light-go: mat-palette($mat-green);
+$traffic-light-warn: mat-palette($mat-yellow);
+$traffic-light-error: mat-palette($mat-red, A200, A100, A400);
+$traffic-light-theme: mat-light-theme($traffic-light-go, $traffic-light-warn, $traffic-light-error);
+
+// Include the theme styles for only specified components.
+@include mat-core-theme($traffic-light-theme);
+@include mat-progress-bar-theme($traffic-light-theme);

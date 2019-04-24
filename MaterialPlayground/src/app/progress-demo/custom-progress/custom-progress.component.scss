@@ -1,0 +1,66 @@
+/* ::ng-deep .mat-progress-bar[dir='rtl'],
+:host-context([dir='rtl']) ::ng-deep .mat-progress-bar {
+    transform: none;
+} */
+
+.section {
+    background: whitesmoke;
+    padding: 10px;
+    margin: 10px;
+}
+.example-margin {
+    margin: 10px;
+}
+
+// @import 'src/theme.scss';
+// $primary: map-get($my-theme, primary);
+// button {
+//     background-color: mat-color($primary);
+// }
+
+// style the progress bar component
+// THIS SHOULD NOT BE USED!  It styles progress bars across entire app
+// ::ng-deep .mat-progress-bar-fill::after {
+//     background-color: #1e457c;
+// }
+
+// ::ng-deep .mat-progress-bar-buffer {
+//     background: #e4e8eb;
+// }
+
+// ::ng-deep .mat-progress-bar {
+//     border-radius: 2px;
+// }
+
+// //This way requires viewEncapsulation set to none
+// @import 'src/theme.scss';
+// .my-progress-bar-ok {
+//     &.mat-progress-bar {
+//         margin: 10px;
+//         height: 20px;
+//         border-radius: 20px;
+//     }
+
+//     .mat-progress-bar-fill::after {
+//         background-color: $progress-bar-ok;
+//     }
+
+//     .mat-progress-bar-buffer {
+//         background-color: $progress-bar-background;
+//     }
+// }
+// .my-progress-bar-error {
+//     &.mat-progress-bar {
+//         margin: 10px;
+//         height: 20px;
+//         border-radius: 20px;
+//     }
+
+//     .mat-progress-bar-fill::after {
+//         background-color: $progress-bar-error;
+//     }
+
+//     .mat-progress-bar-buffer {
+//         background-color: $progress-bar-background;
+//     }
+// }
